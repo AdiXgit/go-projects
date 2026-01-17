@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package mdstream;
+option go_package = "md_stream_engine/proto;proto";
+
+message Tick {
+  string symbol = 1;
+  double price = 2;
+  int64 volume = 3;
+  int64 ts = 4;
+}
+
+message Result {
+  string symbol = 1;
+  double value = 2;
+}
+
+message SubscribeRequest {}
+
+service MDStream {
+  rpc StreamResults(SubscribeRequest) returns (stream Result);
+}
