@@ -1,4 +1,4 @@
-# Go Projects Repository 🚀
+# Go Projects Repository 
 
 ## Overview
 
